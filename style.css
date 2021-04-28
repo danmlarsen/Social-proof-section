@@ -133,45 +133,24 @@ body {
     #social-proof {
         margin-top: 127px;
         max-width: 70rem;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 3rem .8rem;
+        gap: 3rem 2rem;
     }
 
     #social-proof header {
-        text-align: left;
-    }
-
-    .testimonials {
-        grid-column: span 2;
-        flex-direction: row;
-        align-items: stretch;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    #social-proof {
-        grid-template-columns: minmax(12.5rem, 27.8rem) auto;
+        padding: 0 3rem;
     }
 
     #social-proof header h1 {
         font-size: 3rem;
     }
 
-     .testimonials {
-        align-items: flex-start;
-    }
-
-     .testimonials .testimonial:nth-child(2) {
-        /* transform: translateY(16px); */
-        margin-top: 16px;
-    }
-     .testimonials .testimonial:nth-child(3) {
-        /* transform: translateY(32px); */
-        margin-top: 32px;
+    .testimonials { 
+        flex-direction: row;
+        align-items: stretch;
     }
 
     .ratings {
-        align-items: flex-end;
+        align-items: center;
         justify-content: center;
     }
 
@@ -183,13 +162,35 @@ body {
         column-gap: 2rem;
         padding-left: 2rem;
     }
+}
+
+@media only screen and (min-width: 900px) {
+    #social-proof {
+        grid-template-columns: auto minmax(300px, 540px);
+    }
+
+    #social-proof header {
+        text-align: left;
+        padding: 0;
+    }
 
     .ratings .rating:nth-child(1) {
-        /* transform: translateX(-94px); */
-        margin-right: 94px;
+        align-self: flex-start;
     }
-     .ratings .rating:nth-child(2) {
-        /* transform: translateX(-47px); */
-        margin-right: 47px;
+     .ratings .rating:nth-child(3) {
+        align-self: flex-end;
+    }
+
+    .testimonials {
+        grid-column: span 2;
+        align-items: center;
+        height: 266px;
+    }
+
+    .testimonials .testimonial:nth-child(1) {
+        align-self: flex-start;
+    }
+     .testimonials .testimonial:nth-child(3) {
+        align-self: flex-end;
     }
 }
