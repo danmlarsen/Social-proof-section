@@ -184,7 +184,7 @@ body {
     .testimonials {
         grid-column: span 2;
         align-items: center;
-        height: 266px;
+        min-height: 266px;
     }
 
     .testimonials .testimonial:nth-child(1) {
